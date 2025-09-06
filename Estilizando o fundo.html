@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Estilizando o Fundo</title>
+  <style>
+    /* Estilo inicial: fundo vermelho */
+    .minha-div {
+      width: 300px;
+      height: 200px;
+      background-color: #FF0000; /* vermelho */
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+    }
+
+    /* Estilo alternativo: fundo azul com 50% de transparência */
+    .transparente {
+      background-color: rgba(0, 0, 255, 0.5); /* azul com 50% */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Div com fundo vermelho -->
+  <div class="minha-div" id="divFundo">
+    Texto na Div
+  </div>
+
+  <!-- Botão para alterar o fundo -->
+  <button onclick="mudarFundo()">Mudar para azul com transparência</button>
+
+  <script>
+    function mudarFundo() {
+      const div = document.getElementById('divFundo');
+      div.classList.add('transparente');
+    }
+  </script>
+
+</body>
+</html>
